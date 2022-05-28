@@ -1,12 +1,11 @@
-def canSum (target, numbers):
+def canSum(target, numbers):
     if (target == 0):
         return True
     if (target < 0):
         return False
-    
+
     for number in numbers:
-        result = canSum(target - number, numbers)
-        if (result):
+        if result := canSum(target - number, numbers):
             return True
     return False
 
